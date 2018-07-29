@@ -7,19 +7,68 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var labelHaltestelle: UILabel!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+		createAndDonateShortcut()
+		createAndDonateIntent()
 	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	//******************************************************************************************************************
+	//* MARK: - Create and Donate a NSUserActivity
+	//******************************************************************************************************************
+	func createAndDonateShortcut() {
+		//create
+		let userActivity = NSUserActivity(activityType: "de.macundi.SiriShortcuts-Demo.zeigeFahrplan")
+		userActivity.isEligibleForSearch     = true  //ohne search, keine prediction, also muss dies hier immer true sein
+		userActivity.isEligibleForHandoff    = false //Handoff ist separat und damit für uns kmplett optional
+		userActivity.isEligibleForPrediction = true  //dies ist der wichtige Punkt! Ohne prediction, kein Siri!
+		userActivity.title    = "Fahrplan für Zuhause"
+		userActivity.userInfo = ["Haltestelle":"Alte Kirche"]
+		userActivity.requiredUserInfoKeys = ["Haltestelle"]
+		userActivity.suggestedInvocationPhrase = "Zeig mir den Fahrplan für Zuhause"
+
+		//donate
+		self.userActivity = userActivity
+	}
+
+	//******************************************************************************************************************
+	//* MARK: - create and donate an intent
+	//******************************************************************************************************************
+	func createAndDonateIntent () {
+		let myIntent = ZeigeFahrplanIntent()
+		myIntent.haltestelle = "Alte Kirche"
+		myIntent.suggestedInvocationPhrase = "Zeige den Fahrplan für Alte Kirche"
+
+		let interaction = INInteraction(intent: myIntent, response: nil)
+		interaction.donate { error in
+			//error-handling
+		}
+	}
+
+	//******************************************************************************************************************
+	//* MARK: - receive and handle requests from iOS/Siri once user activated it
+	//******************************************************************************************************************
+	func showTableFor(userActivity:NSUserActivity) {
+		if let haltestelle = userActivity.userInfo?["Haltestelle"] as? String {
+			labelHaltestelle.text = haltestelle
+		} else {
+			labelHaltestelle.text = "da ging was schief"
+		}
+	}
+
+	func showTableFor(intent: ZeigeFahrplanIntent) {
+		if let name = intent.haltestelle {
+			labelHaltestelle.text = name
+		}
 	}
 
 
 }
+
 

@@ -12,6 +12,7 @@
 		02347765210C76B100FFA6BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02347763210C76B100FFA6BB /* Main.storyboard */; };
 		02347767210C76B300FFA6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02347766210C76B300FFA6BB /* Assets.xcassets */; };
 		0234776A210C76B300FFA6BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02347768210C76B300FFA6BB /* LaunchScreen.storyboard */; };
+		02C6E990210DA2DD000BCE6A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		02347766210C76B300FFA6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02347769210C76B300FFA6BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0234776B210C76B300FFA6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				0234775F210C76B100FFA6BB /* AppDelegate.swift */,
 				02347761210C76B100FFA6BB /* ViewController.swift */,
 				02347763210C76B100FFA6BB /* Main.storyboard */,
+				02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */,
 				02347766210C76B300FFA6BB /* Assets.xcassets */,
 				02347768210C76B300FFA6BB /* LaunchScreen.storyboard */,
 				0234776B210C76B300FFA6BB /* Info.plist */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					0234775B210C76B100FFA6BB = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -135,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C6E990210DA2DD000BCE6A /* Intents.intentdefinition in Sources */,
 				02347762210C76B100FFA6BB /* ViewController.swift in Sources */,
 				02347760210C76B100FFA6BB /* AppDelegate.swift in Sources */,
 			);
@@ -213,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +272,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -283,13 +288,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = "SiriShortcuts-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.macundi.SiriShortcuts-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -301,13 +307,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = "SiriShortcuts-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.macundi.SiriShortcuts-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
