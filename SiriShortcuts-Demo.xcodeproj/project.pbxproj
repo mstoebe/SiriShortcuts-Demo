@@ -12,8 +12,35 @@
 		02347765210C76B100FFA6BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02347763210C76B100FFA6BB /* Main.storyboard */; };
 		02347767210C76B300FFA6BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02347766210C76B300FFA6BB /* Assets.xcassets */; };
 		0234776A210C76B300FFA6BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02347768210C76B300FFA6BB /* LaunchScreen.storyboard */; };
+		0290F42A2117826D0031241B /* FahrplanIntentsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0290F4232117826D0031241B /* FahrplanIntentsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0290F42F2117828A0031241B /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */; };
+		0290F431211782E90031241B /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0290F430211782E90031241B /* IntentHandler.swift */; };
 		02C6E990210DA2DD000BCE6A /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0290F4282117826D0031241B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02347754210C76B100FFA6BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0290F4222117826D0031241B;
+			remoteInfo = FahrplanIntentsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0290F42E2117826D0031241B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0290F42A2117826D0031241B /* FahrplanIntentsExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0234775C210C76B100FFA6BB /* SiriShortcuts-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SiriShortcuts-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,11 +50,21 @@
 		02347766210C76B300FFA6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02347769210C76B300FFA6BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0234776B210C76B300FFA6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0290F4232117826D0031241B /* FahrplanIntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FahrplanIntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0290F4272117826D0031241B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0290F430211782E90031241B /* IntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		02347759210C76B100FFA6BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0290F4202117826D0031241B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0234775E210C76B100FFA6BB /* SiriShortcuts-Demo */,
+				0290F4242117826D0031241B /* FahrplanIntentsExtension */,
 				0234775D210C76B100FFA6BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				0234775C210C76B100FFA6BB /* SiriShortcuts-Demo.app */,
+				0290F4232117826D0031241B /* FahrplanIntentsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,8 +95,8 @@
 		0234775E210C76B100FFA6BB /* SiriShortcuts-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				0234775F210C76B100FFA6BB /* AppDelegate.swift */,
 				02347761210C76B100FFA6BB /* ViewController.swift */,
+				0234775F210C76B100FFA6BB /* AppDelegate.swift */,
 				02347763210C76B100FFA6BB /* Main.storyboard */,
 				02C6E98F210DA2DD000BCE6A /* Intents.intentdefinition */,
 				02347766210C76B300FFA6BB /* Assets.xcassets */,
@@ -65,6 +104,15 @@
 				0234776B210C76B300FFA6BB /* Info.plist */,
 			);
 			path = "SiriShortcuts-Demo";
+			sourceTree = "<group>";
+		};
+		0290F4242117826D0031241B /* FahrplanIntentsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0290F4272117826D0031241B /* Info.plist */,
+				0290F430211782E90031241B /* IntentHandler.swift */,
+			);
+			path = FahrplanIntentsExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +125,34 @@
 				02347758210C76B100FFA6BB /* Sources */,
 				02347759210C76B100FFA6BB /* Frameworks */,
 				0234775A210C76B100FFA6BB /* Resources */,
+				0290F42E2117826D0031241B /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0290F4292117826D0031241B /* PBXTargetDependency */,
 			);
 			name = "SiriShortcuts-Demo";
 			productName = "SiriShortcuts-Demo";
 			productReference = 0234775C210C76B100FFA6BB /* SiriShortcuts-Demo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0290F4222117826D0031241B /* FahrplanIntentsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0290F42D2117826D0031241B /* Build configuration list for PBXNativeTarget "FahrplanIntentsExtension" */;
+			buildPhases = (
+				0290F41F2117826D0031241B /* Sources */,
+				0290F4202117826D0031241B /* Frameworks */,
+				0290F4212117826D0031241B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FahrplanIntentsExtension;
+			productName = FahrplanIntentsExtension;
+			productReference = 0290F4232117826D0031241B /* FahrplanIntentsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,13 +160,16 @@
 		02347754210C76B100FFA6BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Markus Stöbe";
 				TargetAttributes = {
 					0234775B210C76B100FFA6BB = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+					};
+					0290F4222117826D0031241B = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -117,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				0234775B210C76B100FFA6BB /* SiriShortcuts-Demo */,
+				0290F4222117826D0031241B /* FahrplanIntentsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +200,13 @@
 				0234776A210C76B300FFA6BB /* LaunchScreen.storyboard in Resources */,
 				02347767210C76B300FFA6BB /* Assets.xcassets in Resources */,
 				02347765210C76B100FFA6BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0290F4212117826D0031241B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +223,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0290F41F2117826D0031241B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0290F431211782E90031241B /* IntentHandler.swift in Sources */,
+				0290F42F2117828A0031241B /* Intents.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0290F4292117826D0031241B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0290F4222117826D0031241B /* FahrplanIntentsExtension */;
+			targetProxy = 0290F4282117826D0031241B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		02347763210C76B100FFA6BB /* Main.storyboard */ = {
@@ -284,6 +379,7 @@
 		0234776F210C76B300FFA6BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
@@ -303,6 +399,7 @@
 		02347770210C76B300FFA6BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
@@ -314,6 +411,47 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.macundi.SiriShortcuts-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0290F42B2117826D0031241B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E2BGP67TX9;
+				INFOPLIST_FILE = FahrplanIntentsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.macundi.SiriShortcuts-Demo.FahrplanIntentsExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0290F42C2117826D0031241B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E2BGP67TX9;
+				INFOPLIST_FILE = FahrplanIntentsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.macundi.SiriShortcuts-Demo.FahrplanIntentsExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -336,6 +474,15 @@
 			buildConfigurations = (
 				0234776F210C76B300FFA6BB /* Debug */,
 				02347770210C76B300FFA6BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0290F42D2117826D0031241B /* Build configuration list for PBXNativeTarget "FahrplanIntentsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0290F42B2117826D0031241B /* Debug */,
+				0290F42C2117826D0031241B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
