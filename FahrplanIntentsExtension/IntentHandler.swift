@@ -12,15 +12,16 @@ class IntentHandler: INExtension, ZeigeFahrplanIntentHandling {
 	func confirm(intent: ZeigeFahrplanIntent, completion: @escaping (ZeigeFahrplanIntentResponse) -> Void) {
 		//make sure all parameters needed are present and you can handle the intent
 		//then send feedback back to Siri/iOS
-		
-		completion(ZeigeFahrplanIntentResponse(code: .ready, userActivity: nil))
+		let response = ZeigeFahrplanIntentResponse(code: .ready, userActivity: nil)
+		completion(response)
 	}
 	
 	
 	func handle(intent: ZeigeFahrplanIntent, completion: @escaping (ZeigeFahrplanIntentResponse) -> Void) {
 		//load table from internet
-		
-		completion(ZeigeFahrplanIntentResponse(code: .success, userActivity: nil))
+		let response = ZeigeFahrplanIntentResponse(code: .success, userActivity: nil)
+		response.zeitBisAbfahrt = "27 Minuten"
+		completion(response)
 	}
     
     override func handler(for intent: INIntent) -> Any {

@@ -29,6 +29,21 @@
 			<string>ZeigeFahrplan</string>
 			<key>INIntentParameterCombinations</key>
 			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationIsPrimary</key>
+					<false/>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string></string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>QmrD58</string>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Wann fährt der nächste Bus?</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>AgUzMF</string>
+				</dict>
 				<key>haltestelle</key>
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
@@ -76,7 +91,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string></string>
+						<string>Der nächste Bus fährt in ${zeitBisAbfahrt}.</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>karsZs</string>
 						<key>INIntentResponseCodeName</key>
@@ -86,9 +101,22 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>INIntentResponseParameters</key>
-				<array/>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>zeitBisAbfahrt</string>
+						<key>INIntentResponseParameterSupportsMultipleValues</key>
+						<false/>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
 			</dict>
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>

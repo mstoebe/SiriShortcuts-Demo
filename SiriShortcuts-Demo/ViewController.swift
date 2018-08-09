@@ -42,8 +42,8 @@ class ViewController: UIViewController {
 	//******************************************************************************************************************
 	func createAndDonateIntent () {
 		let myIntent = ZeigeFahrplanIntent()
-		myIntent.haltestelle = "Alte Kirche"
-		myIntent.suggestedInvocationPhrase = "Zeige den Fahrplan für Alte Kirche"
+		myIntent.haltestelle = ""
+		myIntent.suggestedInvocationPhrase = "Wann fährt der nächste Bus?"
 
 		let interaction = INInteraction(intent: myIntent, response: nil)
 		interaction.donate { error in
