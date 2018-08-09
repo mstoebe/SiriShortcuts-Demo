@@ -9,7 +9,7 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>17G65</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>10L213o</string>
+	<string>10L221o</string>
 	<key>INIntentDefinitionToolsVersion</key>
 	<string>10.0</string>
 	<key>INIntents</key>
@@ -38,7 +38,7 @@
 					<key>INIntentParameterCombinationSubtitleID</key>
 					<string>luxMf5</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<false/>
+					<true/>
 					<key>INIntentParameterCombinationTitle</key>
 					<string>Zeige Fahrplan für ${haltestelle}</string>
 					<key>INIntentParameterCombinationTitleID</key>

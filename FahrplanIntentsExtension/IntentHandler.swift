@@ -9,10 +9,19 @@
 import Intents
 
 class IntentHandler: INExtension, ZeigeFahrplanIntentHandling {
-	func handle(intent: ZeigeFahrplanIntent, completion: @escaping (ZeigeFahrplanIntentResponse) -> Void) {
-		<#code#>
+	func confirm(intent: ZeigeFahrplanIntent, completion: @escaping (ZeigeFahrplanIntentResponse) -> Void) {
+		//make sure all parameters needed are present and you can handle the intent
+		//then send feedback back to Siri/iOS
+		
+		completion(ZeigeFahrplanIntentResponse(code: .ready, userActivity: nil))
 	}
-
+	
+	
+	func handle(intent: ZeigeFahrplanIntent, completion: @escaping (ZeigeFahrplanIntentResponse) -> Void) {
+		//load table from internet
+		
+		completion(ZeigeFahrplanIntentResponse(code: .success, userActivity: nil))
+	}
     
     override func handler(for intent: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,

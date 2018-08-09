@@ -50,6 +50,8 @@
 		02347766210C76B300FFA6BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02347769210C76B300FFA6BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0234776B210C76B300FFA6BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		023ECADC211C914F0076DC39 /* SiriShortcuts-Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SiriShortcuts-Demo.entitlements"; sourceTree = "<group>"; };
+		023ECADD211C91580076DC39 /* FahrplanIntentsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FahrplanIntentsExtension.entitlements; sourceTree = "<group>"; };
 		0290F4232117826D0031241B /* FahrplanIntentsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FahrplanIntentsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0290F4272117826D0031241B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0290F430211782E90031241B /* IntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		0234775E210C76B100FFA6BB /* SiriShortcuts-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				023ECADC211C914F0076DC39 /* SiriShortcuts-Demo.entitlements */,
 				02347761210C76B100FFA6BB /* ViewController.swift */,
 				0234775F210C76B100FFA6BB /* AppDelegate.swift */,
 				02347763210C76B100FFA6BB /* Main.storyboard */,
@@ -109,6 +112,7 @@
 		0290F4242117826D0031241B /* FahrplanIntentsExtension */ = {
 			isa = PBXGroup;
 			children = (
+				023ECADD211C91580076DC39 /* FahrplanIntentsExtension.entitlements */,
 				0290F4272117826D0031241B /* Info.plist */,
 				0290F430211782E90031241B /* IntentHandler.swift */,
 			);
@@ -167,9 +171,19 @@
 					0234775B210C76B100FFA6BB = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0290F4222117826D0031241B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -381,6 +395,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SiriShortcuts-Demo/SiriShortcuts-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = "SiriShortcuts-Demo/Info.plist";
@@ -401,6 +416,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SiriShortcuts-Demo/SiriShortcuts-Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = "SiriShortcuts-Demo/Info.plist";
@@ -419,6 +435,7 @@
 		0290F42B2117826D0031241B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FahrplanIntentsExtension/FahrplanIntentsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = FahrplanIntentsExtension/Info.plist;
@@ -440,6 +457,7 @@
 		0290F42C2117826D0031241B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = FahrplanIntentsExtension/FahrplanIntentsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E2BGP67TX9;
 				INFOPLIST_FILE = FahrplanIntentsExtension/Info.plist;
